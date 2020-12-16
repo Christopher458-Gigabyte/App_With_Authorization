@@ -1,0 +1,115 @@
+﻿@page
+@model App_With_Authorization.Pages.Modules.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Module</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Module.ID" />
+            <div class="form-group">
+                <label asp-for="Module.ReleaseDate" class="control-label"></label>
+                <input asp-for="Module.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Module.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Modulnummer" class="control-label"></label>
+                <input asp-for="Module.Modulnummer" class="form-control" />
+                <span asp-validation-for="Module.Modulnummer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Modulname" class="control-label"></label>
+                <input asp-for="Module.Modulname" class="form-control" />
+                <span asp-validation-for="Module.Modulname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Semester" class="control-label"></label>
+                <input asp-for="Module.Semester" class="form-control" />
+                <span asp-validation-for="Module.Semester" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Workload" class="control-label"></label>
+                <input asp-for="Module.Workload" class="form-control" />
+                <span asp-validation-for="Module.Workload" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Semesterwochenstunden" class="control-label"></label>
+                <input asp-for="Module.Semesterwochenstunden" class="form-control" />
+                <span asp-validation-for="Module.Semesterwochenstunden" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Leistungspunkte" class="control-label"></label>
+                <input asp-for="Module.Leistungspunkte" class="form-control" />
+                <span asp-validation-for="Module.Leistungspunkte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Turnus" class="control-label"></label>
+                <input asp-for="Module.Turnus" class="form-control" />
+                <span asp-validation-for="Module.Turnus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Curriculare_Zuordnung" class="control-label"></label>
+                <input asp-for="Module.Curriculare_Zuordnung" class="form-control" />
+                <span asp-validation-for="Module.Curriculare_Zuordnung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Lernziele" class="control-label"></label>
+                <input asp-for="Module.Lernziele" class="form-control" />
+                <span asp-validation-for="Module.Lernziele" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Schlüsselqualifikationen" class="control-label"></label>
+                <input asp-for="Module.Schlüsselqualifikationen" class="form-control" />
+                <span asp-validation-for="Module.Schlüsselqualifikationen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Inhaltliche_Beschreibung" class="control-label"></label>
+                <input asp-for="Module.Inhaltliche_Beschreibung" class="form-control" />
+                <span asp-validation-for="Module.Inhaltliche_Beschreibung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Unterrichtsform" class="control-label"></label>
+                <input asp-for="Module.Unterrichtsform" class="form-control" />
+                <span asp-validation-for="Module.Unterrichtsform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Prüfungsart" class="control-label"></label>
+                <input asp-for="Module.Prüfungsart" class="form-control" />
+                <span asp-validation-for="Module.Prüfungsart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Prüfungsform" class="control-label"></label>
+                <input asp-for="Module.Prüfungsform" class="form-control" />
+                <span asp-validation-for="Module.Prüfungsform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Verbindlichkeit" class="control-label"></label>
+                <input asp-for="Module.Verbindlichkeit" class="form-control" />
+                <span asp-validation-for="Module.Verbindlichkeit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module.Literaturangaben" class="control-label"></label>
+                <input asp-for="Module.Literaturangaben" class="form-control" />
+                <span asp-validation-for="Module.Literaturangaben" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
